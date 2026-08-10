@@ -1,11 +1,25 @@
-<div class="min-h-screen flex flex-col bg-slate-950 text-slate-100">
+<div class="min-h-screen flex flex-col bg-ink text-cream">
   <app-nav />
 
   <main class="flex-1">
     <router-outlet />
   </main>
 
-  <footer class="border-t border-slate-800 py-6 text-center text-sm text-slate-500">
-    &copy; {{ year }} Emmanuel Mark. All rights reserved.
+  <footer class="border-t border-periwinkle/40 bg-ink">
+    <div class="max-w-6xl mx-auto px-6 py-14">
+      <div class="font-display text-4xl sm:text-6xl font-bold uppercase tracking-tight text-cream">
+        Emmanuel Mark
+      </div>
+      <app-pixel-bars theme="onDark" class="mt-8 block h-16 sm:h-20 opacity-60" />
+    </div>
+    <div class="border-t border-periwinkle/40 px-6 py-4">
+      <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-[10px] uppercase tracking-widest text-periwinkle">
+        <span>&copy; {{ year }} Emmanuel Mark. All rights reserved.</span>
+        <div class="flex gap-6">
+          <a routerLink="/about" class="transition-colors hover:text-coral">About</a>
+          <a routerLink="/contact" class="transition-colors hover:text-coral">Contact</a>
+        </div>
+      </div>
+    </div>
   </footer>
 </div>

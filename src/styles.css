@@ -7,12 +7,13 @@ html {
 }
 
 body {
-  font-family: 'PP Neue Montreal', ui-sans-serif, system-ui, sans-serif;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  background-color: #1A1F47;
 }
 
 ::selection {
-  background-color: rgb(56 189 248 / 0.35);
-  color: #fff;
+  background-color: #FF594A;
+  color: #1A1F47;
 }
 
 ::-webkit-scrollbar {
@@ -20,24 +21,30 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #020617;
+  background: #1A1F47;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #1e293b;
-  border-radius: 9999px;
-  border: 2px solid #020617;
+  background-color: #6170BB;
+  border: 2px solid #1A1F47;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #334155;
+  background-color: #FF594A;
 }
 
 @layer utilities {
   .bg-grid {
     background-image:
-      linear-gradient(to right, rgb(148 163 184 / 0.07) 1px, transparent 1px),
-      linear-gradient(to bottom, rgb(148 163 184 / 0.07) 1px, transparent 1px);
-    background-size: 40px 40px;
+      linear-gradient(to right, rgb(97 112 187 / 0.18) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(97 112 187 / 0.18) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .bg-grid-light {
+    background-image:
+      linear-gradient(to right, rgb(20 63 153 / 0.15) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(20 63 153 / 0.15) 1px, transparent 1px);
+    background-size: 48px 48px;
   }
 }

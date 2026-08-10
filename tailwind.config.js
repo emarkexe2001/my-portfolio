@@ -4,48 +4,55 @@ module.exports = {
     "./src/**/*.{html,ts}",
   ],
   theme: {
+    borderRadius: {
+      none: '0px',
+      DEFAULT: '0px',
+      sm: '0px',
+      md: '0px',
+      lg: '0px',
+      xl: '0px',
+      '2xl': '0px',
+      '3xl': '0px',
+      full: '9999px',
+    },
     extend: {
+      colors: {
+        ink: '#1A1F47',
+        royal: '#143F99',
+        periwinkle: '#6170BB',
+        cream: '#FCFFDA',
+        coral: '#FF594A',
+      },
       fontFamily: {
-        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        display: ['Poppins', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        sans: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+        mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+        display: ['"Space Grotesk"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       keyframes: {
         fadeInUp: {
           '0%': { opacity: '0', transform: 'translateY(16px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
-        blob: {
-          '0%, 100%': { transform: 'translate(0, 0) scale(1)' },
-          '33%': { transform: 'translate(30px, -40px) scale(1.1)' },
-          '66%': { transform: 'translate(-20px, 20px) scale(0.95)' },
-        },
-        bounceSlow: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(6px)' },
-        },
         popIn: {
           '0%': { opacity: '0', transform: 'scale(0.5) translateY(30px)' },
           '100%': { opacity: '1', transform: 'scale(1) translateY(0)' },
         },
-        gradientX: {
-          '0%, 100%': { backgroundPosition: '0% 50%' },
-          '50%': { backgroundPosition: '100% 50%' },
+        marquee: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
         },
-        glowPulse: {
-          '0%, 100%': { boxShadow: '0 0 0 0 rgba(251, 146, 60, 0.45)' },
-          '50%': { boxShadow: '0 0 22px 6px rgba(236, 72, 153, 0.35)' },
+        blink: {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0' },
         },
       },
       animation: {
         'fade-in-up': 'fadeInUp 0.7s ease-out both',
-        blob: 'blob 10s infinite ease-in-out',
-        'bounce-slow': 'bounceSlow 2s infinite ease-in-out',
         'pop-in': 'popIn 0.65s cubic-bezier(0.34, 1.56, 0.64, 1) both',
-        'gradient-x': 'gradientX 4s ease infinite',
-        'glow-pulse': 'glowPulse 2.5s ease-in-out infinite',
+        marquee: 'marquee 18s linear infinite',
+        blink: 'blink 1s step-start infinite',
       },
     },
   },
   plugins: [],
 }
-

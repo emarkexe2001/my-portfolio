@@ -1,45 +1,51 @@
-<section class="relative overflow-hidden min-h-[calc(100vh-65px)] flex items-center">
-  <div class="absolute inset-0 -z-20 bg-grid [mask-image:radial-gradient(ellipse_at_top,black_40%,transparent_75%)]"></div>
+<section class="relative border-b border-periwinkle/40 bg-ink">
+  <div class="max-w-6xl mx-auto border-x border-periwinkle/40">
+    <div class="flex items-center justify-between border-b border-periwinkle/40 px-6 py-2 text-[10px] uppercase tracking-widest text-periwinkle">
+      <span>0://hero</span>
+      <span class="inline-flex items-center gap-2">
+        <span class="h-1.5 w-1.5 bg-coral animate-pulse"></span>
+        Available for <span class="text-[#fd5a4a]">new opportunities</span>
+      </span>
+    </div>
 
-  <div class="absolute -top-24 -left-24 h-96 w-96 rounded-full bg-sky-500/25 blur-3xl -z-10 animate-blob"></div>
-  <div class="absolute top-1/3 -right-24 h-96 w-96 rounded-full bg-fuchsia-500/15 blur-3xl -z-10 animate-blob [animation-delay:2s]"></div>
-  <div class="absolute -bottom-32 left-1/4 h-80 w-80 rounded-full bg-violet-500/15 blur-3xl -z-10 animate-blob [animation-delay:4s]"></div>
-
-  <div class="max-w-5xl mx-auto px-6 py-28 sm:py-36 flex flex-col items-start gap-6">
-    <span class="inline-flex items-center rounded-full border border-sky-500/30 bg-sky-500/10 px-4 py-1 text-sm text-sky-400 animate-pop-in [animation-delay:0ms]">
-      <span class="mr-2 h-2 w-2 rounded-full bg-sky-400 animate-pulse"></span>
-      Available for new opportunities
+    <span class="pointer-events-none absolute top-24 right-2 hidden -translate-y-1/2 text-[10px] uppercase tracking-[0.3em] text-periwinkle lg:block [writing-mode:vertical-rl]">
+      Software // Developer
     </span>
 
-    <h1 class="font-display text-5xl sm:text-7xl font-extrabold tracking-tight animate-pop-in [animation-delay:120ms]">
-      <span class="bg-gradient-to-r from-sky-400 via-cyan-300 to-violet-400 bg-clip-text text-transparent">Emmanuel Mark</span>
-    </h1>
+    <div class="px-6 py-16 sm:py-24">
+      <h1 class="font-display max-w-4xl text-4xl font-bold uppercase leading-[1.05] tracking-tight text-cream animate-pop-in sm:text-6xl md:text-7xl">
+        Hi, I'm <span class="text-[#7efcbd]">Emmanuel Mark</span><span class="text-coral">.</span>
+        <br />
+        A <span class="text-[#7efcbd]">backend developer</span> building backend solutions.
+      </h1>
+    </div>
 
-    <p class="text-lg sm:text-xl text-slate-400 max-w-2xl animate-pop-in [animation-delay:240ms]">
-      A software developer who enjoys building clean, reliable, and thoughtful
-      web applications &mdash; from front-end interfaces to the systems behind them.
-    </p>
+    <div class="grid border-t border-periwinkle/40 sm:grid-cols-[220px_1fr]">
+      <div class="flex items-center border-b border-periwinkle/40 px-6 py-6 text-[10px] uppercase tracking-widest text-periwinkle sm:border-b-0 sm:border-r">
+        About me
+      </div>
+      <div class="animate-fade-in-up px-6 py-6 text-sm leading-relaxed text-cream/80 [animation-delay:150ms]">
+        I build clean, dependable software across the stack &mdash; from crafting
+        intuitive front-end interfaces to designing the systems behind them.
+        I care about code that's easy to read, easy to trust, and built to last.
+      </div>
+    </div>
 
-    <div class="flex flex-wrap gap-4 pt-4 animate-pop-in [animation-delay:360ms]">
+    <div class="flex flex-wrap border-t border-periwinkle/40">
       <a
         routerLink="/contact"
-        class="group relative overflow-hidden rounded-lg bg-gradient-to-r from-orange-400 via-pink-500 to-purple-600 bg-[length:200%_200%] animate-gradient-x animate-glow-pulse px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-pink-500/40 active:translate-y-0"
+        class="bg-coral px-8 py-4 text-sm font-bold uppercase tracking-widest text-ink transition-colors hover:bg-cream"
       >
-        <span class="relative z-10">Get in touch</span>
-        <span class="absolute inset-0 -translate-x-full bg-white/20 transition-transform duration-500 group-hover:translate-x-0"></span>
+        Get In Touch
       </a>
       <a
         routerLink="/about"
-        class="rounded-lg border border-slate-700 px-6 py-3 text-sm font-semibold text-slate-200 transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-400/60 hover:text-white hover:shadow-lg hover:shadow-slate-900/50 active:translate-y-0"
+        class="border-l border-periwinkle/40 px-8 py-4 text-sm font-bold uppercase tracking-widest text-cream transition-colors hover:bg-periwinkle/20"
       >
-        About me
+        About Me
       </a>
     </div>
   </div>
 
-  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-slate-600 animate-bounce-slow hidden sm:block">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-    </svg>
-  </div>
+  <app-pixel-bars theme="onDark" class="block h-20 border-t border-periwinkle/40 px-1 py-1 opacity-70 sm:h-28"></app-pixel-bars>
 </section>
