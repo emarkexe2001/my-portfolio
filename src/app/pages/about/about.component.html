@@ -1,0 +1,58 @@
+<section class="relative max-w-5xl mx-auto px-6 py-20 sm:py-28 overflow-hidden">
+  <div class="absolute -top-40 right-0 h-72 w-72 rounded-full bg-sky-500/10 blur-3xl -z-10"></div>
+
+  <div class="grid gap-12 lg:grid-cols-[280px_1fr] lg:items-start">
+    <div class="mx-auto animate-pop-in lg:mx-0">
+      <div class="group relative rounded-2xl bg-gradient-to-br from-sky-400 via-cyan-300 to-violet-400 p-1.5 shadow-xl shadow-sky-500/10 transition-transform duration-500 hover:-rotate-1 hover:scale-[1.02]">
+        <div class="rounded-[14px] bg-slate-950 p-2">
+          <img
+            src="assets/Taka_Shiba.jpg"
+            alt="Emmanuel Mark"
+            class="aspect-[4/5] w-full max-w-[260px] rounded-lg object-cover"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h1 class="text-3xl sm:text-4xl font-bold text-white animate-fade-in-up">About Me</h1>
+
+      <div class="mt-8 space-y-6 text-slate-400 text-lg leading-relaxed animate-fade-in-up [animation-delay:100ms]">
+        <p>
+          I'm Emmanuel Mark, a software developer focused on building clean,
+          dependable web applications. I enjoy working across the stack &mdash;
+          from crafting intuitive front-end interfaces to designing the
+          back-end systems that power them.
+        </p>
+        <p>
+          I care about writing code that's easy to read, easy to maintain, and
+          solves real problems without unnecessary complexity. I'm always
+          looking to learn new tools and approaches that help me build better
+          software.
+        </p>
+      </div>
+
+      <div class="mt-16 animate-fade-in-up [animation-delay:200ms]">
+        <h2 class="text-xl font-semibold text-white">Skills &amp; Tools</h2>
+        <div class="mt-6 flex flex-wrap gap-3">
+          @for (skill of skills; track skill.name) {
+            <span class="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-900 px-4 py-2 text-sm text-slate-300 transition-all duration-300 hover:-translate-y-1 hover:border-sky-400/60 hover:text-white hover:shadow-lg hover:shadow-sky-500/10 cursor-default">
+              <img [src]="skill.icon" [alt]="skill.name" class="h-4 w-4 object-contain" loading="lazy" />
+              {{ skill.name }}
+            </span>
+          }
+        </div>
+      </div>
+
+      <div class="mt-16 animate-fade-in-up [animation-delay:300ms]">
+        <a
+          routerLink="/contact"
+          class="group relative inline-flex overflow-hidden rounded-lg bg-sky-500 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-sky-500/30"
+        >
+          <span class="relative z-10">Get in contact with me</span>
+          <span class="absolute inset-0 -translate-x-full bg-white/20 transition-transform duration-500 group-hover:translate-x-0"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

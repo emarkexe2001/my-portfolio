@@ -1,0 +1,45 @@
+<section class="relative overflow-hidden min-h-[calc(100vh-65px)] flex items-center">
+  <div class="absolute inset-0 -z-20 bg-grid [mask-image:radial-gradient(ellipse_at_top,black_40%,transparent_75%)]"></div>
+
+  <div class="absolute -top-24 -left-24 h-96 w-96 rounded-full bg-sky-500/25 blur-3xl -z-10 animate-blob"></div>
+  <div class="absolute top-1/3 -right-24 h-96 w-96 rounded-full bg-fuchsia-500/15 blur-3xl -z-10 animate-blob [animation-delay:2s]"></div>
+  <div class="absolute -bottom-32 left-1/4 h-80 w-80 rounded-full bg-violet-500/15 blur-3xl -z-10 animate-blob [animation-delay:4s]"></div>
+
+  <div class="max-w-5xl mx-auto px-6 py-28 sm:py-36 flex flex-col items-start gap-6">
+    <span class="inline-flex items-center rounded-full border border-sky-500/30 bg-sky-500/10 px-4 py-1 text-sm text-sky-400 animate-pop-in [animation-delay:0ms]">
+      <span class="mr-2 h-2 w-2 rounded-full bg-sky-400 animate-pulse"></span>
+      Available for new opportunities
+    </span>
+
+    <h1 class="font-display text-5xl sm:text-7xl font-extrabold tracking-tight animate-pop-in [animation-delay:120ms]">
+      <span class="bg-gradient-to-r from-sky-400 via-cyan-300 to-violet-400 bg-clip-text text-transparent">Emmanuel Mark</span>
+    </h1>
+
+    <p class="text-lg sm:text-xl text-slate-400 max-w-2xl animate-pop-in [animation-delay:240ms]">
+      A software developer who enjoys building clean, reliable, and thoughtful
+      web applications &mdash; from front-end interfaces to the systems behind them.
+    </p>
+
+    <div class="flex flex-wrap gap-4 pt-4 animate-pop-in [animation-delay:360ms]">
+      <a
+        routerLink="/contact"
+        class="group relative overflow-hidden rounded-lg bg-gradient-to-r from-orange-400 via-pink-500 to-purple-600 bg-[length:200%_200%] animate-gradient-x animate-glow-pulse px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-pink-500/40 active:translate-y-0"
+      >
+        <span class="relative z-10">Get in touch</span>
+        <span class="absolute inset-0 -translate-x-full bg-white/20 transition-transform duration-500 group-hover:translate-x-0"></span>
+      </a>
+      <a
+        routerLink="/about"
+        class="rounded-lg border border-slate-700 px-6 py-3 text-sm font-semibold text-slate-200 transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-400/60 hover:text-white hover:shadow-lg hover:shadow-slate-900/50 active:translate-y-0"
+      >
+        About me
+      </a>
+    </div>
+  </div>
+
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-slate-600 animate-bounce-slow hidden sm:block">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+    </svg>
+  </div>
+</section>
