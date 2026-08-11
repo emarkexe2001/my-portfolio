@@ -1,13 +1,13 @@
-import { Component } from '@angular/core';
-import { NgIf } from '@angular/common';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
+
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
-  selector: 'app-nav',
-  standalone: true,
-  imports: [NgIf, RouterLink, RouterLinkActive],
-  templateUrl: './nav.component.html',
-  styleUrl: './nav.component.css'
+    selector: 'app-nav',
+    imports: [RouterLink, RouterLinkActive],
+    templateUrl: './nav.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
+    styleUrl: './nav.component.css'
 })
 export class NavComponent {
   menuOpen = false;

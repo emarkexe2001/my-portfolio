@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { PixelBarsComponent } from '../../shared/pixel-bars/pixel-bars.component';
 
 @Component({
-  selector: 'app-contact',
-  standalone: true,
-  imports: [PixelBarsComponent],
-  templateUrl: './contact.component.html',
-  styleUrl: './contact.component.css'
+    selector: 'app-contact',
+    imports: [PixelBarsComponent],
+    templateUrl: './contact.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
+    styleUrl: './contact.component.css'
 })
 export class ContactComponent {
   email = 'emmanuelmark559@gmail.com';

@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-about',
-  standalone: true,
-  imports: [RouterLink],
-  templateUrl: './about.component.html',
-  styleUrl: './about.component.css'
+    selector: 'app-about',
+    imports: [RouterLink],
+    templateUrl: './about.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
+    styleUrl: './about.component.css'
 })
 export class AboutComponent {
   skills = [

@@ -14,15 +14,15 @@
     <ul class="hidden sm:flex items-center gap-1 text-xs font-medium uppercase tracking-widest text-cream">
       <li>
         <a routerLink="/" routerLinkActive="bg-cream text-royal" [routerLinkActiveOptions]="{ exact: true }"
-           class="block px-4 py-2 transition-colors hover:bg-periwinkle/30">Home</a>
+        class="block px-4 py-2 transition-colors hover:bg-periwinkle/30">Home</a>
       </li>
       <li>
         <a routerLink="/about" routerLinkActive="bg-cream text-royal"
-           class="block px-4 py-2 transition-colors hover:bg-periwinkle/30">About</a>
+        class="block px-4 py-2 transition-colors hover:bg-periwinkle/30">About</a>
       </li>
       <li class="ml-2">
         <a routerLink="/contact"
-           class="block bg-coral px-5 py-2 font-bold text-ink transition-colors hover:bg-cream">Contact</a>
+        class="block bg-coral px-5 py-2 font-bold text-ink transition-colors hover:bg-cream">Contact</a>
       </li>
     </ul>
 
@@ -31,29 +31,35 @@
       (click)="toggleMenu()"
       class="sm:hidden inline-flex items-center gap-2 text-xs font-medium uppercase tracking-widest text-cream"
       aria-label="Toggle menu"
-    >
+      >
       Menu
-      <svg *ngIf="!menuOpen" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-      <svg *ngIf="menuOpen" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-      </svg>
+      @if (!menuOpen) {
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      }
+      @if (menuOpen) {
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      }
     </button>
   </nav>
 
-  <ul *ngIf="menuOpen" class="sm:hidden flex flex-col border-t border-periwinkle/40 text-xs font-medium uppercase tracking-widest text-cream">
-    <li>
-      <a routerLink="/" (click)="closeMenu()" routerLinkActive="bg-cream text-royal" [routerLinkActiveOptions]="{ exact: true }"
-         class="block px-6 py-3 border-b border-periwinkle/30 hover:bg-periwinkle/30">Home</a>
-    </li>
-    <li>
-      <a routerLink="/about" (click)="closeMenu()" routerLinkActive="bg-cream text-royal"
-         class="block px-6 py-3 border-b border-periwinkle/30 hover:bg-periwinkle/30">About</a>
-    </li>
-    <li>
-      <a routerLink="/contact" (click)="closeMenu()"
-         class="block bg-coral px-6 py-3 font-bold text-ink">Contact</a>
-    </li>
-  </ul>
+  @if (menuOpen) {
+    <ul class="sm:hidden flex flex-col border-t border-periwinkle/40 text-xs font-medium uppercase tracking-widest text-cream">
+      <li>
+        <a routerLink="/" (click)="closeMenu()" routerLinkActive="bg-cream text-royal" [routerLinkActiveOptions]="{ exact: true }"
+        class="block px-6 py-3 border-b border-periwinkle/30 hover:bg-periwinkle/30">Home</a>
+      </li>
+      <li>
+        <a routerLink="/about" (click)="closeMenu()" routerLinkActive="bg-cream text-royal"
+        class="block px-6 py-3 border-b border-periwinkle/30 hover:bg-periwinkle/30">About</a>
+      </li>
+      <li>
+        <a routerLink="/contact" (click)="closeMenu()"
+        class="block bg-coral px-6 py-3 font-bold text-ink">Contact</a>
+      </li>
+    </ul>
+  }
 </header>
